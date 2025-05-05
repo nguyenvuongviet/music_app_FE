@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_app_bar_height">
+
+
+        <TextView
+            android:id="@+id/title_appbar_home"
+            style="@style/TextAppearance.App.TitleMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_12dp"
+            android:layout_centerVertical="true"
+            android:text="@string/label_hello_user"/>
+    </RelativeLayout>
+</RelativeLayout>

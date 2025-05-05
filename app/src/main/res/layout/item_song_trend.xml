@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_8dp">
+
+    <ImageView
+        android:id="@+id/imv_user_playlist"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginBottom="@dimen/spacing_4dp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_user_playlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginBottom="@dimen/spacing_4dp"
+        style="@style/TextAppearance.App.TitleSmall"/>
+
+    <TextView
+        android:id="@+id/tv_song_count"
+        style="@style/TextAppearance.App.LabelMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_4dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/neutral3"/>
+
+
+</LinearLayout>
