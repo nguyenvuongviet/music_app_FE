@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HomeActivity"
+    android:background="@drawable/background_gradient">
+
+    <!-- App Bar -->
+    <include
+        android:id="@+id/appbar_home"
+        layout="@layout/appbar_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Nội dung chính với NestedScrollView -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="?attr/actionBarSize"
+        app:layout_constraintTop_toBottomOf="@id/appbar_home"
+        app:layout_constraintBottom_toTopOf="@id/miniplayer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/spacing_16dp">
+
+            <!-- Top Thịnh Hành -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/spacing_8dp">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_16dp"
+                    android:layout_weight="1"
+                    android:text="🔥 Top thịnh hành"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/xemtatca_topthinhhanh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_16dp"
+                    android:text="Xem tất cả"
+                    android:textColor="#1E90FF" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_toptrend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_8dp"
+                android:layout_marginBottom="@dimen/spacing_16dp"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_song_horizontal" />
+
+            <!-- Mọi Người Yêu Thích -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/spacing_8dp">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_16dp"
+                    android:layout_weight="1"
+                    android:text="❤️ Mọi người yêu thích"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/xemtatca_moinguoiyeuthich"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_16dp"
+                    android:text="Xem tất cả"
+                    android:textColor="#1E90FF" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_topfavorite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_8dp"
+                android:layout_marginBottom="@dimen/spacing_16dp"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_song_horizontal" />
+
+            <!-- Nghệ Sĩ Hàng Đầu -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/spacing_8dp">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_16dp"
+                    android:layout_weight="1"
+                    android:text="👑 Nghệ sĩ hàng đầu"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/xemtatca_nghesihangdau"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_16dp"
+                    android:text="Xem tất cả"
+                    android:textColor="#1E90FF" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_topartists"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_8dp"
+                android:layout_marginBottom="@dimen/spacing_16dp"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_artist_horizontal" />
+
+            <!-- Mới Ra Mắt -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/spacing_8dp">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_16dp"
+                    android:layout_weight="1"
+                    android:text="✨ Mới ra mắt"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/xemtatca_moiramat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/spacing_16dp"
+                    android:text="Xem tất cả"
+                    android:textColor="#1E90FF" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_newsongs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_8dp"
+                android:layout_marginBottom="@dimen/spacing_16dp"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_song_horizontal" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Miniplayer -->
+    <include
+        android:id="@+id/miniplayer"
+        layout="@layout/miniplayer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_8dp"
+        android:layout_marginBottom="@dimen/spacing_8dp"
+        app:layout_constraintBottom_toTopOf="@id/navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Bottom Navigation Bar -->
+    <include
+        android:id="@+id/navigation"
+        layout="@layout/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

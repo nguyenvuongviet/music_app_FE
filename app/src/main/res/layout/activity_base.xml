@@ -1,0 +1,24 @@
+<!-- res/layout/activity_base.xml -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient">
+
+    <!-- Other views -->
+    <!-- Nếu bạn có các view khác (như AppBarLayout, ViewPager, v.v.), hãy đặt chúng ở đây -->
+
+    <!-- Miniplayer -->
+    <include
+        android:id="@+id/miniplayer"
+        layout="@layout/miniplayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="@dimen/spacing_8dp"
+        android:layout_marginBottom="@dimen/spacing_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

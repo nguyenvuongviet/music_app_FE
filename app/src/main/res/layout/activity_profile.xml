@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProfileActivity"
+    android:background="@drawable/background_gradient">
+
+    <!-- App Bar -->
+    <include
+        android:id="@+id/appbar_home"
+        layout="@layout/appbar_with_back_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Logo và tiêu đề -->
+    <LinearLayout
+        android:id="@+id/logoSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/appbar_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatar_profile"
+            android:layout_width="@dimen/image_120dp"
+            android:layout_height="@dimen/image_120dp"
+            android:layout_marginTop="@dimen/spacing_16dp"
+            android:layout_marginBottom="@dimen/spacing_16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cover_picture_circle" />
+    </LinearLayout>
+
+    <!-- Form thông tin cá nhân -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/spacing_16dp"
+        android:layout_marginEnd="@dimen/spacing_16dp"
+        app:layout_constraintTop_toBottomOf="@+id/logoSection"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingBottom="16dp">
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_16dp"
+                android:padding="@dimen/spacing_8dp">
+
+                <TableRow android:layout_marginBottom="@dimen/spacing_8dp">
+                    <TextView
+                        style="@style/TextAppearance.App.TitleMedium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/label_lastname"
+                        android:textColor="#FFFFFF" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tv_Ho_profile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:text="NGUYEN"
+                        android:textColor="#FFFFFF"/>
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="@dimen/spacing_8dp">
+                    <TextView
+                        style="@style/TextAppearance.App.TitleMedium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/label_firstname"
+                        android:textColor="#FFFFFF" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tv_Ten_profile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:text="CHI THANH"
+                        android:textColor="#FFFFFF"/>
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="@dimen/spacing_8dp">
+                    <TextView
+                        style="@style/TextAppearance.App.TitleMedium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/label_gender"
+                        android:textColor="#FFFFFF" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupGioiTinh"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/RadioButtonNam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/radio_choice_male"
+                            android:textColor="#FFFFFF"
+                            android:buttonTint="#FFFFFF"/>
+
+                        <RadioButton
+                            android:id="@+id/RadioButtonNu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/radio_choice_female"
+                            android:textColor="#FFFFFF"
+                            android:buttonTint="#FFFFFF"/>
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="@dimen/spacing_8dp">
+                    <TextView
+                        style="@style/TextAppearance.App.TitleMedium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="@string/label_email"
+                        android:textColor="#FFFFFF" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tv_gmail_profile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:enabled="false"
+                        android:text="thanh.161003@gmail.com"
+                        android:textColor="#FFFFFF"/>
+                </TableRow>
+            </TableLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmit_profile"
+                style="@style/PrimaryFilledButton"
+                android:layout_width="@dimen/button_width_120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_24dp"
+                android:text="@string/button_save"
+                app:backgroundTint="#1E90FF"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Overlay và ProgressBar -->
+    <FrameLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
