@@ -15,14 +15,17 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <include layout="@layout/widget_add_to_library"
-                android:id="@+id/linear_layout_add_to_libary">
-            </include>
+            <include
+                android:id="@+id/linear_layout_add_to_libary"
+                layout="@layout/widget_add_to_library" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_user_playlist"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/spacing_16dp"
+                android:paddingEnd="@dimen/spacing_16dp"
+                android:clipToPadding="false" />
 
         </LinearLayout>
 

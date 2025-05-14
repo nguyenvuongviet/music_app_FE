@@ -160,7 +160,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_24dp"
                 android:text="@string/button_save"
-                app:backgroundTint="#1E90FF"/>
+                app:backgroundTint="#1E90FF"
+                app:strokeWidth="1dp"/>
         </LinearLayout>
     </ScrollView>
 

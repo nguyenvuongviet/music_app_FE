@@ -34,6 +34,7 @@
     <!-- Label -->
     <string name="label_add_new_playlist">Tạo danh sách phát mới</string>
     <string name="label_add_new_favourite">Thêm bài hát yêu thích</string>
+    <string name="label_add_song_to_playlist">Thêm bài hát vào danh sách</string>
     <string name="label_songs">%d bài hát</string>
     <string name="label_enter_otp">Nhập mã OTP</string>
     <string name="label_recomendation">Gợi ý cho bạn</string>
@@ -157,4 +158,5 @@
 
     <string name="title_login">Đăng Nhập</string>
     <string name="title_signup">Đăng Ký</string>
+    <string name="library_title">Thư viện</string>
 </resources>

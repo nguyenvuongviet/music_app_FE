@@ -3,19 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="@dimen/spacing_8dp">
+    android:paddingVertical="@dimen/spacing_12dp"
+    android:paddingStart="@dimen/spacing_16dp"
+    android:paddingEnd="@dimen/spacing_16dp"
+    android:gravity="center_vertical">
 
     <ImageView
-        android:layout_width="@dimen/image_56dp"
-        android:layout_height="@dimen/image_56dp"
+        android:layout_width="@dimen/image_48dp"
+        android:layout_height="@dimen/image_48dp"
         android:src="@drawable/add_image_holder" />
 
     <TextView
-        style="@style/TextAppearance.App.TitleSmall"
+        style="@style/TextAppearance.App.BodyLarge"
         android:id="@+id/tv_add_to_library"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginStart="@dimen/spacing_8dp" />
+        android:layout_marginStart="@dimen/spacing_16dp"
+        android:layout_weight="1"
+        android:textColor="@color/text_primary" />
 
 </LinearLayout>

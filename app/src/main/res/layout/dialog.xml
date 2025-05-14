@@ -3,53 +3,64 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    app:cardCornerRadius="@dimen/spacing_8dp"
+    app:cardElevation="@dimen/spacing_4dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="@dimen/spacing_24dp"
         android:background="?attr/colorSurface">
 
         <TextView
             android:id="@+id/tv_dialog_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_16dp"
             android:gravity="center"
-            style="@style/TextAppearance.App.TitleLarge"/>
+            android:textAppearance="@style/TextAppearance.App.TitleLarge"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="@dimen/spacing_16dp"/>
 
         <TextView
             android:id="@+id/tv_dialog_message"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_16dp"
             android:gravity="center"
-            style="@style/TextAppearance.App.BodyMedium"/>
+            android:textAppearance="@style/TextAppearance.App.BodyMedium"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:layout_marginBottom="@dimen/spacing_24dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/spacing_24dp">
+            android:orientation="horizontal">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_negative"
+                style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginEnd="@dimen/spacing_12dp"
-                android:backgroundTint="@android:color/transparent"
-                style="@style/TextAppearance.App.TitleMedium" />
+                android:layout_marginEnd="@dimen/spacing_8dp"
+                android:textAppearance="@style/TextAppearance.App.TitleMedium"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="@color/text_primary"
+                app:strokeColor="@color/search_background"
+                app:strokeWidth="2dp"
+                />
+
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_positive"
+                style="@style/PrimaryFilledButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginStart="@dimen/spacing_12dp"
-                style="@style/PrimaryFilledButton"/>
+                android:layout_marginStart="@dimen/spacing_8dp"
+                app:strokeColor="@color/search_background"
+                app:strokeWidth="2dp" />
 
         </LinearLayout>
 

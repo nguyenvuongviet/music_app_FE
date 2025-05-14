@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/fragment_container"
-    tools:context=".activities.SongDetailActivity">
+    tools:context=".activities.SongDetailActivity"
+    android:background="@drawable/background_gradient">
 
+    <!-- Miniplayer -->
     <include
         android:id="@+id/miniplayer"
         layout="@layout/miniplayer"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"/>
+        android:layout_marginHorizontal="@dimen/spacing_8dp"
+        android:layout_marginBottom="@dimen/spacing_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-</FrameLayout>
+    <!-- Placeholder cho nội dung chi tiết bài hát (cần thêm nếu có) -->
+    <!-- Ví dụ: ImageView, TextView, hoặc RecyclerView cho thông tin bài hát -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

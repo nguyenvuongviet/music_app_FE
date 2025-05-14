@@ -10,6 +10,7 @@
     <dimen name="font_caption">10sp</dimen>
 
     <!-- Use for padding & margin -->
+    <dimen name="spacing_72dp">72dp</dimen>
     <dimen name="spacing_64dp">64dp</dimen>
     <dimen name="spacing_40dp">40dp</dimen>
     <dimen name="spacing_32dp">32dp</dimen>

@@ -9,16 +9,17 @@
         android:id="@+id/img_artist_home"
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:layout_marginBottom="@dimen/spacing_4dp"
-        android:scaleType="centerCrop"/>
+        android:layout_marginBottom="@dimen/spacing_8dp"
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/tv_artist_home"
+        style="@style/TextAppearance.App.TitleMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLines="1"
         android:ellipsize="end"
         android:gravity="center"
-        android:layout_marginBottom="@dimen/spacing_4dp"
-        style="@style/TextAppearance.App.TitleMedium"/>
+        android:maxLines="1"
+        android:textColor="@color/text_primary" />
+
 </LinearLayout>

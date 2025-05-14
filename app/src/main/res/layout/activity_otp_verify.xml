@@ -107,7 +107,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_24dp"
-            android:text="@string/button_verify" />
+            android:text="@string/button_verify"
+            app:strokeWidth="1dp"/>
     </LinearLayout>
 
     <ProgressBar

@@ -9,27 +9,27 @@
         android:id="@+id/imv_user_playlist"
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:layout_marginBottom="@dimen/spacing_4dp"
-        android:scaleType="centerCrop"/>
+        android:layout_marginBottom="@dimen/spacing_8dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/img_border_radius_8dp"/>
 
     <TextView
         android:id="@+id/tv_user_playlist"
+        style="@style/TextAppearance.App.TitleMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLines="1"
         android:ellipsize="end"
+        android:maxLines="1"
         android:layout_marginBottom="@dimen/spacing_4dp"
-        style="@style/TextAppearance.App.TitleSmall"/>
+        android:textColor="@color/text_primary"/>
 
     <TextView
         android:id="@+id/tv_song_count"
-        style="@style/TextAppearance.App.LabelMedium"
+        style="@style/TextAppearance.App.LabelSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/spacing_4dp"
         android:ellipsize="end"
         android:maxLines="2"
-        android:textColor="@color/neutral3"/>
-
+        android:textColor="?attr/colorOnSurfaceVariant"/>
 
 </LinearLayout>

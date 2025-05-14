@@ -100,7 +100,8 @@
             android:text="@string/button_create"
             android:backgroundTint="#00BFFF"
             android:textColor="#FFFFFF"
-            style="@style/ExtendedFloatingActionButton"/>
+            style="@style/ExtendedFloatingActionButton"
+            app:strokeWidth="1dp"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </FrameLayout>

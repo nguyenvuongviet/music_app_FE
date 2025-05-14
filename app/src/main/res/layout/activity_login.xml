@@ -67,7 +67,8 @@
                 android:id="@+id/emailTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"/>
+                android:inputType="textEmailAddress"
+                android:textColor="@color/text_primary"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -84,7 +85,8 @@
                 android:id="@+id/passwordTxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:textColor="@color/text_primary"/>
 
             <FrameLayout
                 android:id="@+id/overlay"
@@ -121,7 +123,7 @@
             android:drawablePadding="8dp"
             android:text="@string/button_loggin_google"
             app:backgroundTint="#FFFFFF"
-            android:textColor="#1E90FF"/>
+            android:textColor="@color/text_primary"/>
 
     </LinearLayout>
 

@@ -69,14 +69,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/spacing_16dp"
-            android:text="@string/button_signup" />
+            android:text="@string/button_signup"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/signInBtn"
             style="@style/NeutralFilledButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/button_login" />
+            android:text="@string/button_login"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

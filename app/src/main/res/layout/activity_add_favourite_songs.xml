@@ -17,14 +17,26 @@
             android:layout_marginTop="@dimen/spacing_64dp"
             android:paddingStart="@dimen/spacing_16dp"
             android:paddingEnd="@dimen/spacing_16dp"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
+            <!-- Tiêu đề Create Playlist -->
+            <TextView
+                android:id="@+id/title_create_playlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_add_new_favourite"
+                android:textSize="24sp"
+                android:textAlignment="center"
+                android:layout_marginBottom="@dimen/spacing_24dp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <!-- Recommended Songs Section -->
             <LinearLayout
                 android:id="@+id/ln_recommended_songs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/spacing_24dp"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tv_recommendation"
@@ -40,26 +52,31 @@
                     android:layout_height="wrap_content"
                     android:gravity="end"
                     android:text="@string/label_clear_choices"
-                    android:textColor="@color/primary"/>
-
+                    android:textColor="#1E90FF"/>
             </LinearLayout>
 
+            <!-- RecyclerView Recommended Songs -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_recommended_songs"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="@dimen/spacing_16dp"/>
 
         </LinearLayout>
 
-
-
+        <!-- Floating Action Button -->
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/fab_add_to_favourite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/spacing_16dp"
             android:text="@string/button_add"
-            style="@style/ExtendedFloatingActionButton"/>
+            android:backgroundTint="#00BFFF"
+            android:textColor="#FFFFFF"
+            style="@style/ExtendedFloatingActionButton"
+            app:strokeWidth="1dp"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

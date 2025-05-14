@@ -10,28 +10,28 @@
         android:id="@+id/img_album"
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:layout_marginBottom="@dimen/spacing_4dp"
-        android:scaleType="centerCrop"/>
+        android:layout_marginBottom="@dimen/spacing_8dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/img_border_radius_8dp"/>
 
     <TextView
         android:id="@+id/tv_album_name"
+        style="@style/TextAppearance.App.TitleMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLines="1"
         android:ellipsize="end"
         android:gravity="center"
+        android:maxLines="1"
         android:layout_marginBottom="@dimen/spacing_4dp"
-        android:textColor="@color/neutral5"
-        style="@style/TextAppearance.App.TitleMedium"/>
+        android:textColor="@color/text_primary"/>
 
     <TextView
         android:id="@+id/tv_album_song_count"
+        style="@style/TextAppearance.App.LabelMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tvPlaylistIntro"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/spacing_4dp"
         android:fontFamily="@font/lexend_medium"
-        android:textColor="@color/neutral3"
         android:textAlignment="center"
-        style="@style/TextAppearance.App.LabelLarge"/>
+        android:textColor="?attr/colorOnSurfaceVariant"/>
 </LinearLayout>

@@ -3,20 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.SearchingFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_16dp"
+    tools:context=".fragments.SearchingFragment">
+
+    <TextView
+        style="@style/TextAppearance.App.TitleMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_delete_history"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="@dimen/spacing_16dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_lichsutimkiem"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/spacing_8dp"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false" />
+
     <TextView
         android:id="@+id/txt_xoalichsutimkiem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing_8dp"
-        android:layout_marginHorizontal="@dimen/spacing_8dp"
-        android:hint="@string/label_delete_history" />
+        android:layout_marginTop="@dimen/spacing_16dp"
+        android:padding="@dimen/spacing_8dp"
+        android:text="@string/label_delete_history"
+        android:textColor="@color/primary"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_gravity="end"/>
 
 </LinearLayout>

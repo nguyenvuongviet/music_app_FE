@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="?attr/colorSurface">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/top_app_bar_height">
@@ -9,41 +11,50 @@
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/profile_image"
-            android:layout_marginStart="@dimen/spacing_16dp"
             android:layout_width="@dimen/image_32dp"
-            android:layout_centerVertical="true"
             android:layout_height="@dimen/image_32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/spacing_16dp"
             android:src="@drawable/cover_picture_circle"
-            app:civ_border_width="2dp"
-            app:civ_border_color="#FF000000"/>
+            app:civ_border_color="?attr/colorOnSurface"
+            app:civ_border_width="2dp" />
 
         <TextView
             android:id="@+id/title_appbar_library"
-            style="@style/TextAppearance.App.TitleMedium"
+            style="@style/TextAppearance.App.TitleLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/spacing_8dp"
+            android:layout_marginStart="@dimen/spacing_16dp"
             android:layout_toEndOf="@+id/profile_image"
-            android:text="Thư viện"/>
+            android:text="@string/library_title"
+            android:textColor="?attr/colorOnSurface" />
 
         <ImageView
             android:id="@+id/ic_notification"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="@dimen/spacing_8dp"
+            android:layout_marginEnd="@dimen/spacing_16dp"
             android:layout_toStartOf="@+id/ic_setting"
-            android:src="@drawable/ic_32dp_outline_notifications" />
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_32dp_outline_notifications"
+            android:textColor="?attr/colorOnSurface"  />
 
         <ImageView
             android:id="@+id/ic_setting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/spacing_20dp"
-            android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_32dp_outline_settings" />
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/spacing_16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_32dp_outline_settings"
+            android:textColor="?attr/colorOnSurface"  />
 
     </RelativeLayout>
 </RelativeLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Hoang Phuc-->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,74 +8,60 @@
     android:id="@+id/fragment_container"
     tools:context=".activities.TopicActivity">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <!-- NestedScrollView -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/miniplayer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-                <include
-                    android:id="@+id/included_top_playlist"
-                    layout="@layout/top_playlist"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <include
-                    android:id="@+id/included_top_playlist_option"
-                    layout="@layout/top_playlist_option"
-                    app:layout_constraintTop_toBottomOf="@+id/included_top_playlist"
-                    tools:layout_editor_absoluteX="-41dp" />
-
-                <include layout="@layout/list_song"
-                    android:id="@+id/included_list_song"
-                    app:layout_constraintTop_toBottomOf="@id/included_top_playlist_option"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/spacing_10dp"/>
-        </LinearLayout>
+                    android:orientation="vertical">
 
+                        <!-- Top Playlist -->
+                        <include
+                            android:id="@+id/included_top_playlist"
+                            layout="@layout/top_playlist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
 
+                        <!-- Top Playlist Option -->
+                        <include
+                            android:id="@+id/included_top_playlist_option"
+                            layout="@layout/top_playlist_option"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_8dp" />
+
+                        <!-- List Song -->
+                        <include
+                            android:id="@+id/included_list_song"
+                            layout="@layout/list_song"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_10dp"
+                            android:layout_marginStart="@dimen/spacing_8dp"
+                            android:layout_marginEnd="@dimen/spacing_8dp"
+                            android:layout_marginBottom="@dimen/spacing_16dp" />
+
+                </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- Miniplayer -->
         <include
             android:id="@+id/miniplayer"
             layout="@layout/miniplayer"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="bottom"/>
+            android:layout_marginHorizontal="@dimen/spacing_8dp"
+            android:layout_marginBottom="@dimen/spacing_8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-</RelativeLayout>
-<!--Trong Phuc-->
-<!--<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".activities.TopicActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <include
-        android:id="@+id/included_top_playlist"
-        layout="@layout/top_playlist"
-        app:layout_constraintTop_toTopOf="parent" />
-
-        <include
-            android:id="@+id/included_top_playlist_option"
-            layout="@layout/top_playlist_option"
-            app:layout_constraintTop_toBottomOf="@+id/included_top_playlist"
-            tools:layout_editor_absoluteX="-41dp" />
-
-        <include
-            android:id="@+id/included_list_song"
-            layout="@layout/list_song"
-            app:layout_constraintTop_toBottomOf="@id/included_top_playlist_option"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_10dp"
-            android:layout_marginStart="@dimen/spacing_8dp"
-            android:layout_marginEnd="@dimen/spacing_8dp"/>
-
-    </LinearLayout>
-
-</androidx.core.widget.NestedScrollView>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

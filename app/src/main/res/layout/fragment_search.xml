@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.HomeActivity">
+
     <include
         android:id="@+id/appbar_home"
         layout="@layout/appbar_home"
@@ -15,10 +16,12 @@
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="@dimen/input_field_height"
-        android:layout_marginHorizontal="@dimen/spacing_8dp"
-        android:background="?attr/colorSecondary"
+        android:layout_marginHorizontal="@dimen/spacing_16dp"
+        android:layout_marginTop="@dimen/spacing_16dp"
+        android:background="@drawable/search_view_background"
+        app:iconifiedByDefault="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appbar_home"
@@ -29,7 +32,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
+        android:layout_marginTop="@dimen/spacing_16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/searchView">
     </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

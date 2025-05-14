@@ -213,7 +213,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:textSize="@dimen/font_body"
-                        android:textColor="@color/neutral5"
+                        android:textColor="@color/text_primary"
                         android:layout_marginStart="@dimen/spacing_8dp"
                         android:layout_marginEnd="@dimen/spacing_4dp"
                         />
@@ -222,6 +222,8 @@
                         android:layout_width="90sp"
                         android:layout_height="wrap_content"
                         android:text="@string/button_post"
+                        app:strokeColor="@color/search_background"
+                        app:strokeWidth="2dp"
                         />
                 </LinearLayout>
                 <androidx.recyclerview.widget.RecyclerView
