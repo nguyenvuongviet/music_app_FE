@@ -14,3 +14,7 @@ App Nghe Nhạc CisnW là một ứng dụng di động cho phép người dùng
 ### Yêu cầu
 
 - Sử dụng Android Studio đã cài đặt máy ảo và cái cài đặt liên quan.
+
+### Link FE
+
+- https://github.com/nguyenvuongviet/music_app_BE
